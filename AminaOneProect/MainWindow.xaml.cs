@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AminaOneProect.Component;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace AminaOneProect
         public MainWindow()
         {
             InitializeComponent();
+            var productList = App.db.Product.ToList();
+            foreach(var product in productList)
+            {
+                ProductWp.Children.Add(new MaketOne(product));
+            }
         }
     }
 }

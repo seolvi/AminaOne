@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AminaOneProect.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace AminaOneProect.Component
     /// </summary>
     public partial class MaketOne : UserControl
     {
-        public MaketOne()
+        public MaketOne(Product product)
         {
             InitializeComponent();
+            TitleTb.Text = product.Title;
+            EvalutionTb.Text = product.OverrideFeedback;
+            NewPrice.Text = product.CostDiscount;
+            OldPrice.Visibility = product.CostVisibility;
+
         }
     }
 }

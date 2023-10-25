@@ -5,41 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AminaOneProect"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Shop Milenium" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-
-            </Grid.ColumnDefinitions>
-            <TextBlock HorizontalAlignment="Center" 
-        VerticalAlignment="Center" Grid.ColumnSpan="4" 
-       FontSize="25" Foreground="Red" 
-      FontStyle="Italic" FontWeight="Bold">Авторизация</TextBlock>
-
-            <TextBlock Grid.Column=" 1" Grid.Row=" 1" HorizontalAlignment="Center" 
-          VerticalAlignment="Center">Логин</TextBlock>
-            <TextBox Grid.Row=" 1" Grid.Column="2" Height="30" BorderBrush="Black" 
-                 BorderThickness="2" ></TextBox>
-
-            <TextBlock Grid.Column=" 1" Grid.Row=" 2" HorizontalAlignment="Center" 
-          VerticalAlignment="Center">Пароль</TextBlock>
-            <TextBox Grid.Row=" 2" Grid.Column="2" Height="30" BorderBrush="Black" 
-                 BorderThickness="2"></TextBox>
-            <Button Grid.Row="3" Grid.Column="2" Width="150" HorizontalAlignment="Center"
-                VerticalAlignment="Center">Вход</Button>
-            
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="193*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FFE7FABF" Grid.ColumnSpan="2"></Rectangle>
+        <Rectangle Fill="#FFE7FABF" Grid.RowSpan="2"></Rectangle>
+       
+        <TextBlock Grid.Column="1" x:Name="TitleTb" FontSize="25" 
+        HorizontalAlignment="Center" >Shop Milenium</TextBlock>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.Column="1">
+            <WrapPanel  x:Name="ProductWp"/>
+        </ScrollViewer>
 
 
-        </Grid>
+    </Grid>
 </Window>
-
