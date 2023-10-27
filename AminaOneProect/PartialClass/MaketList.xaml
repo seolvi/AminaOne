@@ -9,8 +9,45 @@
       Title="MaketList">
 
     <Grid>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="61*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Height="50"  Orientation="Horizontal">
+
+            <ComboBox HorizontalAlignment="Left" Margin="15 0" Height="30" Width="150"  SelectionChanged="ComboBox_SelectionChanged" x:Name="SortCb" >
+                <ComboBoxItem>По умолчанию</ComboBoxItem>
+                <ComboBoxItem>По убыванию</ComboBoxItem>
+                <ComboBoxItem>По возрастанию</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Margin="15 15" VerticalAlignment="Center" >Фильтр: по скидке</TextBlock>
+            <ComboBox x:Name="FilterDiscountCb" Margin="15 0" Height="30" Width="150"  SelectionChanged="FilterDiscountCb_SelectionChanged" >
+                <ComboBoxItem Content="все"/>
+                <ComboBoxItem Content="от 0% до 5%"/>
+                <ComboBoxItem Content="от 5% до 15%"/>
+                <ComboBoxItem Content="от 15% до 30%"/>
+                <ComboBoxItem Content="от 30% до 70%"/>
+                <ComboBoxItem Content="от 70% до 100%"/>
+            </ComboBox>
+
+            <TextBox x:Name="SearchTb" Margin="15 0" Height="30" Width="250" TextChanged="SearchTb_TextChanged"></TextBox>
+        </StackPanel>
+
+       <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Disabled">
             <WrapPanel x:Name="MainWp" ></WrapPanel>
         </ScrollViewer>
+
+
+      
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button  Height="30" Width="100" x:Name="AddBtn" Click="AddBtn_Click">Добавить</Button>
+            <TextBlock Margin="20 0" x:Name="CountDataTb"></TextBlock>
+        </StackPanel>
+
+
     </Grid>
 </Page>

@@ -19,10 +19,15 @@
         <Rectangle Fill="#FFE7FABF" Grid.RowSpan="2"></Rectangle>
        
         <TextBlock Grid.Column="1" x:Name="TitleTb" FontSize="25" 
-        HorizontalAlignment="Center" >Shop Milenium</TextBlock>
-        <ScrollViewer HorizontalScrollBarVisibility="Disabled" Grid.Row="1" Grid.Column="1">
-            <WrapPanel  x:Name="ProductWp"/>
-        </ScrollViewer>
+        HorizontalAlignment="Center" VerticalAlignment="Center" >Shop Milenium</TextBlock>
+        
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" >
+            <Button x:Name="BackBTN" Click="BackBTN_Click">Назад</Button>
+            <Button x:Name="ExitBTN" Click="ExitBTN_Click">Выход</Button>
+        </StackPanel>
+
+   
+        <Frame x:Name="MyFrame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
 
 
     </Grid>

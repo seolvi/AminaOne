@@ -16,5 +16,6 @@ namespace AminaOneProect
     public partial class App : Application
     {
         public static HardwareShopAminaEntities db = new HardwareShopAminaEntities();
+        public static bool IsAdmin = false;
     }
 }

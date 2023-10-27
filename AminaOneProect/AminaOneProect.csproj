@@ -68,6 +68,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PartialClass\AddEditProductPartial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialClass\AuthorizatePartialClass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PartialClass\MaketList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +89,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Base\Maketik.cs" />
+    <Compile Include="Base\Navigation.cs" />
     <Compile Include="Component\MaketOne.xaml.cs">
       <DependentUpon>MaketOne.xaml</DependentUpon>
     </Compile>
@@ -101,6 +110,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PartialClass\AddEditProductPartial.xaml.cs">
+      <DependentUpon>AddEditProductPartial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialClass\AuthorizatePartialClass.xaml.cs">
+      <DependentUpon>AuthorizatePartialClass.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialClass\MaketList.xaml.cs">
       <DependentUpon>MaketList.xaml</DependentUpon>

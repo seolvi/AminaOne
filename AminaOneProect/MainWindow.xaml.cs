@@ -1,4 +1,6 @@
-﻿using AminaOneProect.Component;
+﻿using AminaOneProect.Base;
+using AminaOneProect.Component;
+using AminaOneProect.PartialClass;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +26,23 @@ namespace AminaOneProect
         public MainWindow()
         {
             InitializeComponent();
-            var productList = App.db.Product.ToList();
-            foreach(var product in productList)
-            {
-                ProductWp.Children.Add(new MaketOne(product));
-            }
+            Navigation.mainWindow = this;
+
+            Navigation.NextPage(new PartialClassComponent("Авторизация", new AuthorizatePartialClass()));
+            //MyFrame.Navigate(new PartialClassComponent("",new AuthorizatePartialClass()));
+        }
+
+        private void BackBTN_Click(object sender, RoutedEventArgs e)
+        {
+            
+       
+                Navigation.BackPage();
+        }
+
+        private void ExitBTN_Click(object sender, RoutedEventArgs e)
+        {
+             Navigation.ClearHistory();
+             
         }
     }
 }
