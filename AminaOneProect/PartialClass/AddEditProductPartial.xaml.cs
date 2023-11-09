@@ -25,10 +25,10 @@ namespace AminaOneProect.PartialClass
     /// 
 
     public partial class AddEditProductPartial : Page
-    { 
-       
+    {
+
         private Product product;
-        public AddEditProductPartial(Product _product )
+        public AddEditProductPartial(Product _product)
         {
             InitializeComponent();
             product = _product;
@@ -37,9 +37,11 @@ namespace AminaOneProect.PartialClass
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (product.Id == 0)
+            {
+                App.db.SaveChanges();
+            }
             App.db.Product.Add(product);
-            App.db.SaveChanges();
             MessageBox.Show("Сохранено!");
             Navigation.NextPage(new PartialClassComponent("Список услуг", new MaketList()));
         }
@@ -55,7 +57,7 @@ namespace AminaOneProect.PartialClass
                 product.MainImage = File.ReadAllBytes(openFile.FileName);
                 MainImage.Source = new BitmapImage(new Uri(openFile.FileName));
             }
-        
+
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

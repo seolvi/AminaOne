@@ -26,10 +26,10 @@ namespace AminaOneProect.Component
         public MaketOne(Product _product)
         {
             InitializeComponent();
-            product = _product;
+            this.product = _product;
             if (App.IsAdmin == false)
             {
-                
+
                 EditBtn.Visibility = Visibility.Hidden;
                 DeleteBtn.Visibility = Visibility.Hidden;
             }
@@ -41,12 +41,11 @@ namespace AminaOneProect.Component
 
         }
 
-      private void EditBtn_Click(object sender, RoutedEventArgs e)
-        
-            {
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
             Navigation.NextPage(new PartialClassComponent("Редактирование услуги", new AddEditProductPartial(product)));
-            }
-      private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        }
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             if (product.Feedback.Count != 0)
             {
@@ -58,7 +57,9 @@ namespace AminaOneProect.Component
                 App.db.SaveChanges();
             }
         }
+
+
     }
- 
+
 }
 
