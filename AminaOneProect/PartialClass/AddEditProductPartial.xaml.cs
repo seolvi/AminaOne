@@ -37,7 +37,8 @@ namespace AminaOneProect.PartialClass
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+
+            App.db.Product.Add(product);
             App.db.SaveChanges();
             MessageBox.Show("Сохранено!");
             Navigation.NextPage(new PartialClassComponent("Список услуг", new MaketList()));
@@ -49,7 +50,7 @@ namespace AminaOneProect.PartialClass
             {
                 Filter = "*.png|*.png|*.jpg|*.jpg|*.jepg|*.jepg"
             };
-            if (openFile.ShowDialog().GetValueOrDefault()) ;
+            if (openFile.ShowDialog().GetValueOrDefault())
             {
                 product.MainImage = File.ReadAllBytes(openFile.FileName);
                 MainImage.Source = new BitmapImage(new Uri(openFile.FileName));

@@ -23,20 +23,26 @@
            
         </Grid.RowDefinitions>
         <Image Source="/Resources/logo.png" Height="100"></Image>
-
-        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="TitleTb" TextWrapping="Wrap"></TextBlock>
-        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                <TextBlock Grid.Row="3" Grid.Column="1" x:Name="NewPrice" FontSize="18" FontWeight="SemiBold" Margin="5 0"></TextBlock>
-                <TextBlock x:Name="OldPrice" FontSize="16" TextDecorations="Strikethrough"></TextBlock>
             
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="TitleTb" TextWrapping="Wrap"></TextBlock>
+            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" x:Name="NewPrice" FontSize="18" FontWeight="SemiBold"></TextBlock>
+                <TextBlock HorizontalAlignment="Left"  x:Name="OldPrice" TextDecorations="Strikethrough" FontSize="16"></TextBlock>
+                
         </StackPanel>
        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="EvalutionTb" ></TextBlock>
 
              <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
-              <Button Height="50" Width="50">  <Image Source="/Resources/magazin.jpg"  HorizontalAlignment="Left"></Image></Button>
-                <Button Height="50" Width="50" Margin="40 0 0 0">  <Image  Source="/Resources/serdce.jpg" HorizontalAlignment="Center"></Image> </Button>
-                <Button Height="50" Width="50" Margin="40 0 0 0">   <Image Source="/Resources/gravik.png"   HorizontalAlignment="Right"></Image> </Button> 
-        </StackPanel>
+                <Button Height="30" Width="30" Margin="10 0 0 0">  <Image Source="/Resources/magazin.jpg"  HorizontalAlignment="Left"></Image></Button>
+                <Button Height="30" Width="30" Margin="10 0 0 0">  <Image  Source="/Resources/serdce.jpg" HorizontalAlignment="Center"></Image> </Button>
+                <Button Height="30" Width="30" Margin="10 0 0 0">   <Image Source="/Resources/gravik.png"   HorizontalAlignment="Right"></Image> </Button>
+                <Button Height="30" Width="30" Margin="10 0 0 0" x:Name="DeleteBtn" >
+                    <Image Source="/Resources/udalit.png"></Image>
+                </Button>
+                <Button Margin="10 0 0 0" HorizontalAlignment="Right" x:Name="EditBtn" Height="30" Width="30" Click="EditBtn_Click" >
+                    <Image Source="/Resources/redact..jpg" Height="30" Width="30" ></Image>
+                </Button>
+            </StackPanel>
             
          </Grid>  
     </Border>

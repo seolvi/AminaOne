@@ -99,7 +99,7 @@ namespace AminaOneProect.Component.PartialClass
 
          Navigation.NextPage(new PartialClassComponent("Добавление услуги", new AddEditProductPartial(new Product())));
        }
-    }
+    } 
 }
 
 

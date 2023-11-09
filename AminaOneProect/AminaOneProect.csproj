@@ -176,6 +176,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\udalit.png" />
+    <Resource Include="Resources\redact..jpg" />
     <Resource Include="Resources\logo.png" />
     <Resource Include="Resources\gravik.png" />
     <Resource Include="Resources\serdce.jpg" />
